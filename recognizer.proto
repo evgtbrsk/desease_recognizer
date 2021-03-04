@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// The greeter service definition.
+service DeseaseRecognizer {
+    // Sends a greeting
+    rpc Recognize (RecognizeRequest) returns (RecognizeResponse) {}
+}
+  
+// The request message containing the user's name.
+message RecognizeRequest {
+    bytes picture = 1;
+}
+  
+// The response message containing the greetings
+message RecognizeResponse {
+    string desease = 1;
+}
